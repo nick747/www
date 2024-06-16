@@ -7,7 +7,7 @@ export default {
         name: "2.25rem",
         subtitle: "2rem",
         body: "1rem",
-        focus: "1.5rem",
+        links: "1.25rem",
       },
       textColor: {
         normal: "#DEDEDE",

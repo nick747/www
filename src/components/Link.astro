@@ -1,0 +1,25 @@
+---
+const links = {
+  github: ["src/icons/Github-Dark.svg", "GitHub", "https://github.com/nick747"],
+  telegram: ["src/icons/telegram.svg", "Telegram", "https://t.me/nick_is_dead"],
+  coffee: [
+    "src/icons/mug-saucer-solid.svg",
+    "Buy me a coffee!",
+    "https://donate.stripe.com/5kA176dnz8QI3FC288",
+  ],
+};
+
+interface Props {
+  id: string;
+}
+
+const { id } = Astro.props;
+---
+
+<div
+  class="mr-2 mb-2 p-3 gap-1 flex justify-center items-center hover:bg-opacity-100 transition bg-[#2B293E] border-[#2B293E] bg-opacity-10 border-[0.25rem] border-opacity-100 rounded-lg cursor-pointer"
+  onclick={`window.open('${links[id][2]}', '_blank')`}
+>
+  <img src={links[id][0]} class="size-8" />
+  <p class="ml-2 text-links opacity-100 font-bold">{links[id][1]}</p>
+</div>
