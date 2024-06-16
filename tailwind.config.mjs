@@ -7,11 +7,11 @@ export default {
         name: "2.25rem",
         subtitle: "2rem",
         body: "1rem",
-        highlights: "1.5rem",
+        focus: "1.5rem",
       },
       textColor: {
         normal: "#DEDEDE",
-        hightlighted: "#B3A7FF",
+        highlighted: "#B3A7FF",
       },
     },
   },
