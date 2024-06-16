@@ -1,0 +1,29 @@
+---
+const skills = {
+  astro: ["src/icons/Astro.svg", "Astro"],
+  c: ["src/icons/C.svg", "C"],
+  cpp: ["src/icons/CPP.svg", "C++"],
+  css: ["src/icons/CSS.svg", "CSS"],
+  dart: ["src/icons/Dart-Dark.svg", "Dart"],
+  flutter: ["src/icons/Flutter-Dark.svg", "Flutter"],
+  html: ["src/icons/HTML.svg", "HTML"],
+  js: ["src/icons/JavaScript.svg", "JavaScript"],
+  kotlin: ["src/icons/Kotlin-Dark.svg", "Kotlin"],
+  py: ["src/icons/Python-Dark.svg", "Python"],
+  react: ["src/icons/React-Dark.svg", "React"],
+  svelte: ["src/icons/Svelte.svg", "Svelte"],
+};
+
+interface Props {
+  id: string;
+}
+
+const { id } = Astro.props;
+---
+
+<div
+  class="mr-2 mb-2 px-4 py-1 gap-1 flex justify-center items-center hover:bg-opacity-100 transition bg-[#363636] border-[#363636] bg-opacity-50 border-[0.125rem] border-opacity-100 rounded-lg cursor-default"
+>
+  <img src={skills[id][0]} class="size-4" />
+  <p class="body">{skills[id][1]}</p>
+</div>

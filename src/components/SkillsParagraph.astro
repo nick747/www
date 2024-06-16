@@ -1,6 +1,30 @@
+---
+import Skill from "./Skill.astro";
+---
+
 <h2 class="text-subtitle font-bold mb-4">skills</h2>
-<p class="text-body">
+<p class="text-body mb-2">
   I divide my skills into two groups. I'm <span
     class="text-highlighted font-bold">more comfortable</span
   > with these skills:
 </p>
+<div class="flex flex-wrap mb-2">
+  <Skill id="html" />
+  <Skill id="css" />
+  <Skill id="js" />
+  <Skill id="flutter" />
+  <Skill id="dart" />
+</div>
+<p class="text-body mb-2">
+  And I have <span class="text-highlighted font-bold">basic familiarity</span> with
+  these ones:
+</p>
+<div class="flex flex-wrap mb-2">
+  <Skill id="py" />
+  <Skill id="c" />
+  <Skill id="cpp" />
+  <Skill id="kotlin" />
+  <Skill id="react" />
+  <Skill id="svelte" />
+  <Skill id="astro" />
+</div>
