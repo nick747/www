@@ -89,3 +89,13 @@ h3 {
 .transition:hover {
   transform: scale(0.9);
 }
+
+#gradient {
+  position: fixed;
+  top: 90%;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  width: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(26, 24, 36, 1));
+}
