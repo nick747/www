@@ -4,6 +4,7 @@ export default {
   theme: {
     extend: {
       fontSize: {
+        error: "10rem",
         name: "2.25rem",
         subtitle: "2rem",
         body: "1rem",
