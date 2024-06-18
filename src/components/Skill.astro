@@ -1,17 +1,32 @@
 ---
+import { Image } from "astro:assets";
+
+import astro from "../icons/Astro.svg";
+import c from "../icons/C.svg";
+import cpp from "../icons/CPP.svg";
+import css from "../icons/CSS.svg";
+import dart from "../icons/Dart-Dark.svg";
+import flutter from "../icons/Flutter-Dark.svg";
+import html from "../icons/HTML.svg";
+import js from "../icons/JavaScript.svg";
+import kotlin from "../icons/Kotlin-Dark.svg";
+import py from "../icons/Python-Dark.svg";
+import react from "../icons/React-Dark.svg";
+import svelte from "../icons/Svelte.svg";
+
 const skills = {
-  astro: ["src/icons/Astro.svg", "Astro"],
-  c: ["src/icons/C.svg", "C"],
-  cpp: ["src/icons/CPP.svg", "C++"],
-  css: ["src/icons/CSS.svg", "CSS"],
-  dart: ["src/icons/Dart-Dark.svg", "Dart"],
-  flutter: ["src/icons/Flutter-Dark.svg", "Flutter"],
-  html: ["src/icons/HTML.svg", "HTML"],
-  js: ["src/icons/JavaScript.svg", "JavaScript"],
-  kotlin: ["src/icons/Kotlin-Dark.svg", "Kotlin"],
-  py: ["src/icons/Python-Dark.svg", "Python"],
-  react: ["src/icons/React-Dark.svg", "React"],
-  svelte: ["src/icons/Svelte.svg", "Svelte"],
+  astro: [astro, "Astro"],
+  c: [c, "C"],
+  cpp: [cpp, "C++"],
+  css: [css, "CSS"],
+  dart: [dart, "Dart"],
+  flutter: [flutter, "Flutter"],
+  html: [html, "HTML"],
+  js: [js, "JavaScript"],
+  kotlin: [kotlin, "Kotlin"],
+  py: [py, "Python"],
+  react: [react, "React"],
+  svelte: [svelte, "Svelte"],
 };
 
 interface Props {
@@ -24,6 +39,6 @@ const { id } = Astro.props;
 <div
   class="mr-2 mb-2 px-4 py-1 gap-1 flex justify-center items-center hover:bg-opacity-100 transition bg-[#363636] border-[#363636] bg-opacity-50 border-[0.125rem] border-opacity-100 rounded-lg cursor-default"
 >
-  <img src={skills[id][0]} class="size-4" />
+  <Image src={skills[id][0]} alt={skills[id][1]} class="size-4" />
   <p class="text-body opacity-50 font-medium">{skills[id][1]}</p>
 </div>

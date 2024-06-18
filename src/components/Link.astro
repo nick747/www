@@ -1,9 +1,15 @@
 ---
+import { Image } from "astro:assets";
+
+import github from "../icons/Github-Dark.svg";
+import telegram from "../icons/telegram.svg";
+import coffee from "../icons/mug-saucer-solid.svg";
+
 const links = {
-  github: ["src/icons/Github-Dark.svg", "GitHub", "https://github.com/nick747"],
-  telegram: ["src/icons/telegram.svg", "Telegram", "https://t.me/nick_is_dead"],
+  github: [github, "GitHub", "https://github.com/nick747"],
+  telegram: [telegram, "Telegram", "https://t.me/nick_is_dead"],
   coffee: [
-    "src/icons/mug-saucer-solid.svg",
+    coffee,
     "Buy me a coffee!",
     "https://donate.stripe.com/5kA176dnz8QI3FC288",
   ],
@@ -20,6 +26,6 @@ const { id } = Astro.props;
   class="mr-2 mb-2 p-3 gap-1 flex justify-center items-center hover:bg-opacity-100 transition bg-[#2B293E] border-[#2B293E] bg-opacity-10 border-[0.25rem] border-opacity-100 rounded-lg cursor-pointer"
   onclick={`window.open('${links[id][2]}', '_blank')`}
 >
-  <img src={links[id][0]} class="size-8" />
+  <Image src={links[id][0]} alt={links[id][1]} class="size-8" />
   <p class="ml-2 text-links opacity-100 font-bold">{links[id][1]}</p>
 </div>
